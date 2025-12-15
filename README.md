@@ -112,40 +112,7 @@ The project uses many small functions, each with a clear responsibility (support
   - `generateReports()`
   - `calculateTotalRevenue()`, `calculateTotalBookings()`, `calculateEventBookings()`
 
-### Function Flow (High-Level)
 
-Below is a **simplified Mermaid diagram** of the function call flow:
-
-```mermaid
-flowchart TD
-    main[main()] --> loadUsersFromCSV()
-    main --> loadEventsFromCSV()
-    main --> loadTicketsFromCSV()
-    main --> displayHeader()
-    main --> mainMenu[displayMainMenu() / getUserChoice()]
-
-    mainMenu --> adminLogin[adminLogin()]
-    mainMenu --> userLogin[userLogin()]
-    mainMenu --> userSignup[userSignup()]
-
-    adminLogin --> adminMenu[displayAdminMenu() / getUserChoice()]
-    adminMenu --> addEvent()
-    adminMenu --> viewAllEvents()
-    adminMenu --> updateEvent()
-    adminMenu --> deleteEvent()
-    adminMenu --> viewAllRegistrations()
-    adminMenu --> generateReports()
-    adminMenu --> viewAllUsers()
-    adminMenu --> deleteUser()
-
-    userLogin --> userMenu[displayUserMenu() / getUserChoice()]
-    userMenu --> viewAllEventsUser[viewAllEvents()]
-    userMenu --> searchEventByName()
-    userMenu --> searchEventByCategory()
-    userMenu --> bookTicket()
-    userMenu --> viewUserTickets()
-    userMenu --> viewTicketByID()
-```
 
 ### Functional Requirements (User Stories)
 
